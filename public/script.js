@@ -11,9 +11,15 @@ function nombresCompletosConsola() {
   const primerApellido = obtenerContenido("primerApellido");
   const segundoApellido = obtenerContenido("segundoApellido");
 
-  let nombreCompleto1 = primerNombre + " " + segundoNombre + " " + primerApellido;
+  let nombreCompleto1 = primerNombre;
+  
+  if (segundoNombre !== "") {
+    nombreCompleto1 += " " + segundoNombre;
+  }
+  
+  nombreCompleto1 += " " + primerApellido;
 
-  if (segundoApellido !== "" || primerApellido !== "" || segundoNombre !== "" || primerNombre !== "") {
+  if (segundoApellido !== "") {
     nombreCompleto1 += " " + segundoApellido;
   }
 
@@ -22,20 +28,25 @@ function nombresCompletosConsola() {
   const primerApellido2 = obtenerContenido("primerApellido2");
   const segundoApellido2 = obtenerContenido("segundoApellido2");
 
-  let nombreCompleto2 = primerNombre2 + " " + segundoNombre2 + " " + primerApellido2;
+  let nombreCompleto2 = primerNombre2;
   
-  if (segundoApellido2 !== "" || primerApellido2 !== "" || segundoNombre2 !== "" || primerNombre2 !== "") {
+  if (segundoNombre2 !== "") {
+    nombreCompleto2 += " " + segundoNombre2;
+  }
+  
+  nombreCompleto2 += " " + primerApellido2;
+
+  if (segundoApellido2 !== "") {
     nombreCompleto2 += " " + segundoApellido2;
   }
 
-console.log(`
+  console.log(`
 -------
 Integrante 1: "${nombreCompleto1}"
 Integrante 2: "${nombreCompleto2}" 
 -------
   `);
 }
-
 nombresCompletosConsola();
 
 function comparar() {
