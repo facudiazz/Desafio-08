@@ -21,7 +21,7 @@ body{
 }
 
 
-.div{
+article.title{
     background-color: aliceblue;
     border-radius: 50px;
     width: 38em;
